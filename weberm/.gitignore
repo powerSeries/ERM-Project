@@ -1,0 +1,52 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Django-specific files
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+media/
+staticfiles/
+
+# Environment-specific files
+*.env
+.env/
+.venv/
+venv/
+venv.bak/
+
+# Django migrations
+migrations/
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Coverage reports
+coverage/
+*.cover
+*.tox
+*.nox
+*.coverage
+*.hypothesis/
+*.pytest_cache/
+
+# Backup files
+*.bak
+*.swp
+*.swo
+
+# System files
+*.log
+*.pid
