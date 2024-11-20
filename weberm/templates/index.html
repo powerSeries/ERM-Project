@@ -1,3 +1,7 @@
+<!-- {% load django_bootstrap5 %} -->
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
 <!-- app_name/templates/geeks.html  -->
 
 <!DOCTYPE html> 
@@ -8,13 +12,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
     <title>Homepage</title> 
 </head> 
-<body> 
+<body style="background-color: blueviolet;" > 
     <h1>Welcome to Geeksforgeeks.</h1> 
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
 <p> {{  data }}</p>
 
-
-
-
-    <ul>
 </body> 
 </html> 
