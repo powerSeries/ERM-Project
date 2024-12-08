@@ -1,6 +1,7 @@
-<!-- {% load django_bootstrap5 %} -->
+{% load django_bootstrap5 %}
 {% bootstrap_css %}
 {% bootstrap_javascript %}
+{% load fullcalendar_tags %}
 
 <!-- app_name/templates/geeks.html  -->
 
@@ -9,10 +10,22 @@
 <head> 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Homepage</title> 
+
+    <!-- Full Calendar -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.css" rel="stylesheet">
+
+
 </head> 
 <body style="background-color: blueviolet;" > 
+    <!-- FullCalendar JavaScript -->
+    <!-- jQuery CDN (Add this before other scripts like Bootstrap or FullCalendar) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>  <!-- Optional: Moment.js for date manipulation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.js"></script>
+
+
     <h1>Welcome to Geeksforgeeks.</h1> 
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
@@ -24,5 +37,21 @@
     </div>
 <p> {{  data }}</p>
 
+<script>
+    $(document).ready(function() {
+        $('#calendar').fullCalendar({
+            events: [],
+            editable: true,
+            droppable: true,
+            header: {
+                left: 'test',
+                center: 'test2',
+                right: 'test3',
+            }
+        });
+    });
+</script>
+
+<div id="calendar"><div>
 </body> 
 </html> 
